@@ -34,11 +34,6 @@ app.get("/submit", async (req,res) => {
    
 });
 
-app.get("/refresh", (req, res) => {
-    res.render("index.ejs", {
-        message: undefined,
-    });
-});
 
 
 
