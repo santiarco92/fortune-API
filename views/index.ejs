@@ -8,15 +8,26 @@
     <title>Fortune Cookie</title>
 </head>
 <body>
-  <div class="container-fluid">
-    <div class="card" style="width: 18rem;" action="/" method="POST">
+  <form class="container-fluid" action="/submit" method="GET">
+    <div class="card" style="width: 18rem;">
+      <% if (locals.message) {%>
+        <img src="/IMG/Cookie4.png" class="card-img-top" alt="...">
+        <% } else {  %>
         <img src="/IMG/Cookie3.png" class="card-img-top" alt="...">
+        <% } %>
         <div class="card-body">
           <h5 class="card-title">Are You Ready To Know Your Future?</h5>
-          <p class="card-text">....</p>
-          <button class="btn btn-danger" type="submit" name="submit" >Open Cookie</button>
+          <% if (locals.message) { %>
+          <p class="card-text"> <%= message %> </p>
+            <% } else{  %>
+              <p class="card-text">...</p>
+              <% } %>
+             
+                <button  class="btn btn-danger" type="submit" class="form-submit">Open Cookie</button>
+             
+         
         </div>
       </div>
-  </div> 
+    </form> 
 </body>
 </html>

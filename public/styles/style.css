@@ -1,9 +1,4 @@
 :root {
-    --primaryFont: 'Playfair Display';
-    /*COLORS*/
-    --primary-cl: 	#9C27B0; 
-    --secondary-cl: #6DFF73;
-    --tertiary-cl: #2D2323;
     /*FONT WEIGHT*/
     --thin: 100;
     --extra-light: 200;
@@ -30,6 +25,17 @@ body {
 .card {
     text-align: center;
 }
+
+.card-title {
+    font-weight: var(--bold);
+}
+
+.card-text {
+    margin: 2rem; 
+    color: red;
+    font-weight: var(--semi-bold);
+}
+
 
 
 
